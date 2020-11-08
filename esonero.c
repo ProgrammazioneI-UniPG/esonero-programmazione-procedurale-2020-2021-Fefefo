@@ -21,7 +21,7 @@ int main() {
   if (b == '1') { // Controllo se l'utente ha o non ha la chiave
     while(strlen(key) < strlen(inStr)) { // Richiedo la chiave ogni volta che l'utente la inserisce più corta della stringa da cifrare
       printf("Inserisci la chiave per cifrare di lunghezza uguale o maggiore rispetto alla stringa\n");
-      getchar();
+      while(getchar() != '\n');
       fgets(key, 128, stdin);
       strtok(key, "\n");
     }
