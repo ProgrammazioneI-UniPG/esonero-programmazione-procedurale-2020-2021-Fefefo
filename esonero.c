@@ -10,6 +10,7 @@ int main() {
   srand((unsigned) time(&t)); // Inizializzo il generatore di numeri casuali usando il time current come seed
 
   printf("Inserisci la stringa da cifrare\n");
+  while(getchar() != '\n');
   fgets(inStr, 128, stdin); // Input della stringa
   strtok(inStr, "\n"); // Rimuovo lo "\n" a fine stringa che fgets() prende
 
@@ -35,7 +36,6 @@ int main() {
       }
     }
   } while(b != '0' && b != '1');
-
 
   printf("Input: %s\n", inStr);
   printf("Output: %s'\n'", outStr);
